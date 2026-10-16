@@ -1,0 +1,21 @@
+{
+  "name": "Ethan",
+  "intro": [
+    "I'm building [EcoGPT](https://ecogpt.com). We're building a playground for your ideas."
+  ],
+  "socials": {
+    "x": "_ethanleonard",
+    "instagram": "_ethan.leonard",
+    "linkedin": "-ethan-"
+  },
+  "sections": {
+    "Experience": [
+      "CEO @ [EcoGPT](https://ecogpt.com) (6M users, 425k trees planted)"
+    ],
+    "Accomplishments": [
+      "Grew EcoGPT to 6M+ visitors in its first six months, self-funded",
+      "About 600K people chat with EcoGPT every day",
+      "Computer Science @ University of Washington"
+    ]
+  }
+}
