@@ -12,11 +12,11 @@
 
 #### Experience
 
-- <small>CEO @ [EcoGPT](https://ecogpt.com) (6M users, 425k trees planted)</small>
+- <small>CEO @ [EcoGPT](https://ecogpt.com) (5M users, 425k trees planted)</small>
 
 #### Accomplishments
 
-- <small>Grew EcoGPT to 6M+ visitors in its first six months, self-funded</small>
+- <small>Grew EcoGPT to 5M+ visitors in its first six months, self-funded</small>
 - <small>About 600K people chat with EcoGPT every day</small>
 - <small>Computer Science @ University of Washington</small>
 
