@@ -1,7 +1,7 @@
 // Draws an Eco team member's GitHub profile: the README from profile.json, and its images
 // (social pills, the tree snake, the apply button, the team's solar system) in light and dark.
-// Runs in the member's <login>/<login> repo as .eco/render.mjs; `scripts/github-profile/install.ts`
-// copies it there. Node 20+, no dependencies.
+// Runs in the member's <login>/<login> repo as .eco/render.mjs, copied there by
+// hq/tools/github-profile/install.mjs. Node 20+, no dependencies.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const KIT = new URL('./', import.meta.url);
@@ -353,8 +353,10 @@ const applyPill = (theme) =>
 // ---- The team's solar system ------------------------------------------------------------------
 
 // Dark is deep space; light is the same system lit by day. Drawn as one scene, cut into one slice
-// per member so each planet links to its owner.
+// per member so each planet links to its owner. Each slice is at least 160 wide so the name
+// cards keep a gap between them as the team grows.
 const SCENE = { cy: 92, H: 248, sunX: -84, W: 880 };
+const SLICE_MIN = 160;
 const SKY = {
 	dark: {
 		blue: 0.28,
@@ -399,7 +401,7 @@ const SKY = {
 		text: '#172c33',
 	},
 };
-const LIFT = [-12, 12, -10, 10, -12];
+const LIFT = [-12, 12, -10, 10, -12, 12];
 const CARD_GAP = 50,
 	CARD_H = 44;
 
@@ -434,7 +436,8 @@ function rng(seed) {
 
 function teamSlice(team, i, theme) {
 	const k = SKY[theme],
-		{ cy, H, sunX, W } = SCENE,
+		{ cy, H, sunX } = SCENE,
+		W = Math.max(SCENE.W, team.length * SLICE_MIN),
 		tile = W / team.length,
 		x0 = tile * i,
 		x1 = x0 + tile;
