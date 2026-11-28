@@ -3,6 +3,5 @@
 	{ "login": "kbdevs", "name": "Karsten", "planet": "mars" },
 	{ "login": "Timmy0x", "name": "Timmy", "planet": "saturn" },
 	{ "login": "blakeandersonw", "name": "Blake", "planet": "uranus" },
-	{ "login": "chang-07", "name": "Chang", "planet": "neptune" },
-	{ "login": "iancarscadden", "name": "Ian", "planet": "jupiter" }
+	{ "login": "chang-07", "name": "Chang", "planet": "neptune" }
 ]
